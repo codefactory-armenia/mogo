@@ -1,0 +1,848 @@
+/*===========================general start=============*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+    width: 60%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+svg{
+    width: 20px;
+    height: 20px;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.middle_line{
+    display: inline-block;
+    width: 70px;
+    height: 3px;
+    margin: 50px 0;
+    background: #f38181;
+}
+
+.text h6{
+    font-size: 24px;
+    font-family: 'Kaushan Script', cursive;
+}
+
+.text h5{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.text p{
+    font-size: 15px;
+    color: #999999;
+}
+
+/*=================similar section elements start====================>*/
+/*=======================================================================*/
+.about,.services, .design, .service, .team, .blog{
+    padding: 100px 0;
+}
+
+.about_text,.services_text, .design_text, .service_text, .team_text, .works_text, .clients_text, .blog_text{
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.services_itm_icon svg, .service_itm_texts svg, .back svg, .next svg{
+    width: 35px;
+    height: 35px;
+    transform: scale(0.7);
+}
+
+.back, .next{
+    width: 7%;
+}
+
+.content{
+    font-size: 24px;
+}
+
+.content p{
+    color: #999999;
+}
+
+.content h6{
+    color: #333333;
+}
+/*=======================================================================*/
+/*=================similar section elements end====================>*/
+
+
+/*===========================general end=============*/
+
+/*===========================header start=============*/
+header{
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    padding: 30px 0;
+    color: white;
+}
+
+.logo{
+    width: 44%;
+    font-size: 30px;
+}
+nav{
+    text-transform: uppercase;
+    width: 55%;
+    font-size: 14px;
+}
+
+nav a{
+    transition: 0.3s;
+    padding: 7px;
+}
+
+nav a:hover{
+    color: #fce38a;
+    border-bottom: #fce38a solid 2px;
+}
+
+nav a:hover svg{
+    fill: #fce38a;
+}
+
+nav svg{
+    fill: white;
+}
+/*===========================header end=============*/
+
+
+/*===========================top section start=============*/
+.top{
+    background: url("top_bg.png") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.top h6{
+    font-size: 72px;
+}
+
+.top h5{
+    font-size: 100px;
+}
+
+.top .btn{
+    padding: 15px 25px;
+    border: white solid 2px;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    z-index: 1;
+}
+
+.top .btn:after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #f38181;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.7s;
+}
+
+.top .btn:hover::after{
+    opacity: 1;
+}
+
+.top .middle_line{
+    background: white;
+}
+
+.top_bottom{
+    position: absolute;
+    bottom: 0;
+}
+
+.top_bottom_itm{
+    width: 23%;
+    padding: 15px 0;
+    text-align: left;
+    border-top: 2px solid white;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.top_bottom_itm:after{
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%);
+    background: #f38181;
+    transition: 0.5s;
+}
+
+.top_bottom_itm:hover::after{
+    width: 25%;
+}
+
+.top_bottom_itm span{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/*===========================top section end=============*/
+
+/*===========================================================================================*/
+/*===========================about section start and team, works section coincidance=============*/
+/*============================================================================================*/
+.about_img, .team_img{
+    padding-top: 100px;
+}
+
+.about_imgs, .team_imgs {
+    width: 30%;
+    position: relative;
+    transition: 10s;
+}
+
+.about_img_itm, .team_img_itm, .works_img_itm{
+    width: 100%;
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    /*!*transition: 10s;*!   chi ashxatum */
+}
+
+.about_imgs .background, .team_imgs .background{
+    width: 100%;
+    height: 100%;
+    background: #95e1d3;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.about_img_itm img, .team_img_itm img, .works_img_itm img{
+    width: 100%;
+}
+
+.about_img_itm:before, .team_img_itm:before, .works_img_itm:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #f38181, #fce38a);
+    opacity: 0.8;
+    z-index: 0;
+    display: none;
+}
+
+.about_img_txt, .team_img_txt, .works_img_txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    display: none;
+}
+
+.about_img_txt svg, .works_img_txt svg{
+    fill: white;
+}
+
+.about_imgs:hover .about_img_itm, .team_imgs:hover .team_img_itm{
+    top: -10px;
+    left: -10px;
+}
+
+.about_imgs:hover .about_img_itm:before, .team_imgs:hover .team_img_itm:before, .works_img_itm:hover:before{
+    display: block;
+}
+
+.about_imgs:hover .about_img_txt, .works_img_itm:hover .works_img_txt{
+    display: block;
+}
+
+/*===========================about section end=============*/
+
+
+/*===========================statistic section start=============*/
+.statistics{
+    background: #95e1d3;
+    color: white;
+}
+
+.statistic_itm{
+    width: 20%;
+    padding: 50px;
+    text-align: center;
+}
+
+.statistic_itm h6{
+    font-size: 48px;
+}
+
+.statistic_itm p{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+/*===========================statistic section end=============*/
+
+
+/*===========================services section start=============*/
+.services_itms{
+    flex-wrap: wrap;
+}
+
+.services_itm{
+    width: 30%;
+    padding: 20px;
+    font-size: 15px;
+}
+
+.services_itm_text{
+    padding-left: 20px;
+}
+
+.services_itm h6{
+    text-transform: uppercase;
+    color: #333333;
+}
+
+.services_itm p{
+    color: #999999;
+}
+/*===========================services section end=============*/
+
+/*===========================design section start=============*/
+.design {
+    background: url("design_bg.jpg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    padding-bottom: 0;
+}
+
+.design .tablet{
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+
+}
+
+.design .tablet img{
+    width: 100%;
+}
+
+.tablet .phone{
+    width: 50%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translate(40%, 15%);
+}
+
+/*===========================design section end=============*/
+
+/*===========================service section start=============*/
+.service_itm_img{
+    width: 47%;
+}
+
+.service_itm_img img{
+    width: 100%;
+    height: auto;
+}
+
+.service_itms{
+    padding-top: 70px;
+    /*height: 335px;*/
+}
+
+.service_itm_texts{
+    width: 50%;
+    /*height: 100%;*/
+    flex-direction: column;
+}
+
+.title_description{
+    display: flex;
+    align-items: center;
+}
+
+.service_itm_texts .icon, .service_itm_texts .title_open{
+    display: contents;
+}
+
+.service_itm_texts h6{
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.service_itm_texts p{
+    color: #999999;
+    font-size: 14px;
+}
+
+.drop_down{
+    cursor: pointer;
+}
+
+.containing{
+    width: 100%;
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+.containing{
+    max-height: 80px;
+    overflow: auto;
+}
+
+.containing::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* Track */
+.containing::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.containing::-webkit-scrollbar-thumb {
+    background: #95e1d3;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+/*.containing::-webkit-scrollbar-thumb:hover {*/
+/*    background: #b30000;*/
+/*}*/
+/*===========================service section end=============*/
+
+
+/*===========================message section start=============*/
+/*======================recomendation section's coincidances*/
+.back{
+    padding-right: 20px;
+}
+
+.next{
+    padding-left: 20px;
+}
+
+.messages{
+    background: #f8f8f8;
+}
+
+.messages .container, .recomendations .container{
+    align-items: center;
+}
+
+.messages .content, .recomendations .content{
+    padding: 50px 0;
+    font-size: 20px;
+    align-items: center;
+}
+
+.content_svg{
+    margin-right: 20px;
+    border: 2px solid #95e1d3;
+    width: 120px;
+    height: 120px;
+    position: relative;
+}
+
+.messages .content_text{
+    width: 80%;
+}
+
+.messages .content_svg svg{
+    width: 65px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*===========================message section end=============*/
+
+
+/*===========================team section start=============*/
+
+/*=============text part code in genera*/
+/*=============image part code in about section css*/
+
+.team .team_img_txt{
+     width: 135px;
+     justify-content: center;
+}
+
+.team_imgs:hover .team_img_txt{
+    display: inherit;
+    justify-content: center;
+}
+
+.team_img_txt a{
+    display: inline-block;
+    background: #fce38a;
+    width: 35px;
+    height: 35px;
+    transition: 0.5s;
+    position: relative;
+}
+
+.team svg{
+    fill: #f38181;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.team_img_txt a:hover{
+    background: #f38181;
+}
+
+.team_img_txt a:hover svg{
+    fill: #fce38a;
+}
+
+/*===========================team section end=============*/
+
+/*===========================icons section start=============*/
+.icons{
+    background: #f8f8f8;
+    padding: 50px 0;
+}
+.icons img{
+    width: 100%;
+}
+/*===========================icons section end=============*/
+
+
+/*===========================works section start=============*/
+
+/*=============text part code in genera*/
+/*=============image part code in about section css*/
+.works{
+    padding-top: 100px;
+}
+
+.works_img_container{
+    display: flex;
+}
+
+.works_text{
+    padding-bottom: 70px;
+}
+
+.works_img_itms {
+    width: 25%;
+    position: relative;
+    transition: 10s;
+    display: flex;
+    flex-direction: column;
+}
+
+.works_img_txt p{
+    font-size: 0.8em;
+}
+
+/*===========================works section end=============*/
+
+/*===========================recomendations section start=============*/
+/*=====================general design in messages==========*/
+.recomendations .content{
+    padding: 100px 0;
+}
+
+.recomendations .content_img{
+    margin-right: 20px;
+}
+/*===========================recomendations section end=============*/
+
+
+/*===========================clients section start=============*/
+.clients{
+    background: url("clients_bg.jpg") no-repeat center;
+    background-size: cover;
+    padding-top: 70px;
+}
+
+.clients_itms{
+    flex-wrap: wrap;
+}
+.client_itm{
+    width: 50%;
+    padding: 0 20px 70px 20px;
+}
+
+.client-itm_img{
+    padding-right: 30px;
+}
+
+.client_itm .middle_line{
+    margin: 20px 0;
+}
+
+.client-itm_text h6{
+    color: #333333;
+    padding-bottom: 10px;
+}
+
+.client-itm_text p{
+    font-size: 0.8em;
+    color: #999999;
+}
+
+.client-itm_text p:nth-child(2){
+    font-size: 0.8em;
+    color: #333333;
+}
+/*===========================clients section end=============*/
+
+/*===========================blog section start=============*/
+.blog_itm{
+    width: 30%;
+}
+
+.blog_itm img{
+    width: 100%;
+    height: auto;
+}
+
+.blog_itm_img{
+    position: relative;
+}
+
+.blog .date{
+    width: 50px;
+    height: 50px;
+    background: #95e1d3;
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    left: -10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.views_itms, .views, .comments{
+    display: flex;
+}
+
+.blog_itm_txt h6{
+    margin: 10px 0;
+    color: #333333;
+}
+
+.blog_itm_txt p{
+    font-size: 0.8em;
+    color: #999999;
+}
+
+hr{
+    margin: 10px 0;
+}
+
+.views_itms svg{
+    fill: #95e1d3;
+}
+
+.views{
+    margin-right: 15px;
+}
+
+.views_svg, .comments_svg{
+    margin-right: 5px;
+}
+/*===========================blod section end=============*/
+
+
+/*===========================map section start=============*/
+.map{
+    background: url("map_bg.jpg") no-repeat center;
+    background-size: cover;
+}
+.map .container{
+    text-align: center;
+    color: #f38181;
+    padding: 50px 0;
+}
+
+.map .container svg{
+    fill: #f38181;
+}
+.map p{
+    margin: 10px 0;
+}
+
+.map .middle_line{
+    margin: 0;
+}
+/*===========================map section end=============*/
+
+/*===========================footer start=============*/
+footer{
+    background: #f8f8f8;
+}
+
+footer .container{
+    padding-top: 50px;
+    color: #999999;
+}
+
+footer p{
+    font-size: 0.8em;
+}
+
+.subscription{
+    width: 38%;
+}
+
+.blogs, .insta{
+    width: 30%;
+}
+
+.social_medias, .all_followers{
+    display: flex;
+}
+
+.subscription h6{
+    font-size: 46px;
+}
+
+.all_followers p{
+    color: #333333;
+    font-weight: bold;
+}
+
+.social_media_svgs svg{
+    fill: #95e1d3;
+}
+
+form{
+    margin-top: 20px;
+}
+
+form input:nth-child(1){
+    border: #999999;
+}
+
+form input:nth-child(2){
+    border: none;
+}
+
+form .btn{
+    color: white;
+    background: #95e1d3;
+}
+
+input{
+    padding: 10px;
+}
+
+.subscription h6 + p{
+    margin: 20px 0;
+}
+
+.blogs_itms{
+    margin-top: 20px;
+}
+
+.blogs_img{
+    margin-right: 10px;
+}
+
+.blogs h6, .insta h6{
+    color: #333333;
+}
+
+.insta_itms{
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.insta_itm{
+    width: 33%;
+}
+
+.insta_itm img{
+    width: 100%;
+}
+
+footer .container:nth-child(2){
+    text-align: center;
+}
+
+/*===========================footer end=============*/
+
+/*============For max 1000px screen==========*/
+@media all and (max-width: 1000px) and (min-width: 501px){
+    footer .container{
+        flex-wrap: wrap;
+    }
+
+    .subscription{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .blogs, .insta{
+        width: 50%;
+    }
+
+}
+
+/*============For max 500px screen==========*/
+@media all and (max-width: 500px){
+    footer .container{
+        flex-wrap: wrap;
+    }
+
+    .subscription, .subscription, .blogs, .insta{
+        width: 100%;
+    }
+}
